@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pkmn</title>
+  <link rel ="stylesheet" type"text/css" href="_todo.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script> 
+  
+  <script>
+  var app = angular.module('myApp', []);
+
+	app.controller('myCtrl', function($scope) {
+		$scope.carname = "Volvo";
+	});
+</script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<!--Opening Menu-->
+	<div class = "openscreen">
+		<div id = 'open1' class = "firstmenu">
+			<p ID = 'CONTINUE'>CONTINUE</p>
+			<p ID = 'NEW GAME'>NEW GAME</p>
+			<p ID = 'OPTIONS'>OPTIONS</p>
+			
+			<div id = 'open2' class = "secondmenu">
+				<div id = 'open3' class = "yesno"></div>
+				
+				</div>
+			</div>
+		</div>
+<!--Scene Screen-->
+	<div id = 'scene' class = "scene">
+		<div class = "imagePane">
+			</div>
+		<div class = "wordbox">
+			</div>
+		</div>
+<!--Battle Screen -->
+	<div class = "main">
+		<div class = "redstatus">
+			<p> Lv.: {{redlv}}</p>
+			<div class = 'bar'></div>
+			<p>{{red.hp}}/{{red.hpMax}}</p>
+			</div>
+		
+		<div class = "imagePane red">
+			<img src = {{redpkmn}}>
+			</div>
+		<div class = "imagePane blue">
+			<img src = {{bluepkmn}}>
+			</div>
+		<div class = "bluestatus">
+			<p> Lv.: {{bluelv}}</p>
+			<div class = 'bar'></div>
+			<p>{{blue.hp}}/{{blue.hpMax}}</p>
+			</div>
+		
+		<div class = "wordbox">
+			<div class = "menubox">
+				<div class = 'option1'></div>
+				<div class = 'option2'></div>
+				<div class = 'option3'></div>
+				<div class = 'option4'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- World Screen -->
+	<div class = "under">
+		</div>
+
+	<div class = "alt">
+		</div>
+		
+</body>
+</html>

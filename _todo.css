@@ -1,0 +1,134 @@
+/* _todo.css*/
+/*((2*level+10)/250*(A/D) * base)*rand(85-100);*/
+
+body{
+	margin:0;
+	margin-left:1em;
+	Font-Family: 'Courier New';
+}
+p{
+	margin:1%;
+}
+div{
+	display: none;
+	border-width: 1px;
+	border-style: solid; 
+}
+/*opening */
+.openscreen{
+	display: none;
+	width: 16em;
+	height: 14.4em;
+	position: relative;
+	
+}
+.firstmenu{
+	position: absolute;
+	display: block;
+	left: 2%;
+	top: 2%;
+	width: 50%;
+}
+.secondmenu{
+	/*todo*/
+}
+
+
+
+
+/*Scene Display*/
+.scene {
+	display: none;
+	width: 16em;
+	height: 14.4em;
+	position: relative;
+}
+.imagePane{
+	position:absolute;
+	display: inline;
+	margin: 1%;
+	width: 96%;
+	height: 65%;
+	border: 1px;
+	border-style: dashed;
+}
+.menuBox{
+	display: block;
+	border: 3%;
+	border-style: dashed;
+	position: absolute;
+	left:0;
+	top: 70%;
+	height:27%;
+	width: 96%;
+	background-color: gray;
+}
+.option1{
+	
+}
+
+/*Battle Scene*/
+.main{
+	display: block;
+	width: 16em;
+	height: 14.4em;
+	position: relative;
+}
+.redstatus{
+	position:absolute;
+	left: 1%;
+	display: block;
+	height:33%;
+	width: 48%;
+	text-align: center;
+}
+.red{
+	top: 2%;
+	height: 33%;
+	width: 48%;
+	left: 50%;
+}
+.bluestatus{
+	position:absolute;
+	left: 50%;
+	top: 36%;
+	display: block;
+	height:33%;
+	width: 48%;
+	text-align: center;
+}
+.blue{
+	top: 33%;
+	height: 33%;
+	width: 48%;
+	left: 1%;
+}
+.bar{
+	display: block;
+	width: 100%;
+	height: 3px;
+	margin: 0%;
+	background-color: green;
+}
+.bar:hover{
+	display:block;
+	margin-right: 100%;
+	width:0%;
+	background-color: red;
+	transition: all, 1s, ease;
+}
+/*Generic*/
+.wordbox{
+	display: block;
+	border: 3%;
+	border-style: dashed;
+	position: absolute;
+	left: 1%;
+	top: 70%;
+	height:27%;
+	width: 96%;
+	background-color: gray;
+}
+.yesno{
+	//todo
+}
