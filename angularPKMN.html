@@ -12,7 +12,10 @@
   var app = angular.module('myApp', []);
 
 	app.controller('myCtrl', function($scope) {
-		$scope.carname = "Volvo";
+		$scope.redpkmn = "hoothoot.jpg";
+		$scope.bluepkmn = "ratata.jpg";
+		$scope.redlv = "12";
+		$scope.bluelv = "2";
 	});
 </script>
 </head>
@@ -58,11 +61,15 @@
 			</div>
 		
 		<div class = "wordbox">
+		
 			<div class = "menubox">
-				<div class = 'option1'></div>
-				<div class = 'option2'></div>
-				<div class = 'option3'></div>
-				<div class = 'option4'></div>
+				<div class = 'menuCol1'>
+					<div class = 'option1'></div>
+					<div class = 'option2'></div>
+				</div>
+				<div class = 'menuCol1'>
+					<div class = 'option3'></div>
+					<div class = 'option4'></div>
 				</div>
 			</div>
 		</div>
