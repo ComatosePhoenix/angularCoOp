@@ -8,18 +8,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script> 
   
-  <script>
-  var app = angular.module('myApp', []);
-
-	app.controller('myCtrl', function($scope) {
-		$scope.redpkmn = "hoothoot.jpg";
-		$scope.bluepkmn = "ratata.jpg";
-		$scope.redlv = "12";
-		$scope.bluelv = "2";
-	});
-</script>
+  <script src="brains.js"></script>
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
+<body ng-cloak ng-app="myApp" ng-controller="myCtrl">
 <!--Opening Menu-->
 	<div class = "openscreen">
 		<div id = 'open1' class = "firstmenu">
@@ -43,36 +34,45 @@
 <!--Battle Screen -->
 	<div class = "main">
 		<div class = "redstatus">
-			<p> Lv.: {{redlv}}</p>
-			<div class = 'bar'></div>
-			<p>{{red.hp}}/{{red.hpMax}}</p>
+			<p> {{red.name}}</p>
+			<p> Lv. {{redlv}}</p>
+			<div style = "margin-right:{{red.hp / red.hpmax*100}}%; width:{{.9*red.hp / red.hpmax*100}}%" class = 'bar'></div>
+			<p>{{red.hp}}/{{red.hpmax}}</p>
 			</div>
 		
 		<div class = "imagePane red">
-			<img src = {{redpkmn}}>
+			<img src = {{red.id}}.jpg>
 			</div>
 		<div class = "imagePane blue">
-			<img src = {{bluepkmn}}>
+			<img src = {{blue.id}}.jpg>
 			</div>
 		<div class = "bluestatus">
+			<p> {{blue.name}}</p>
 			<p> Lv.: {{bluelv}}</p>
-			<div class = 'bar'></div>
-			<p>{{blue.hp}}/{{blue.hpMax}}</p>
+			<div style = "margin-right:{{blue.hp / blue.hpmax*100}}%; width:{{.9*blue.hp / blue.hpmax*100}}%"class = 'bar'></div>
+			<p>{{blue.hp}}/{{blue.hpmax}}</p>
 			</div>
 		
-		<div class = "wordbox">
-		
-			<div class = "menubox">
-				<div class = 'menuCol1'>
-					<div class = 'option1'></div>
-					<div class = 'option2'></div>
-				</div>
-				<div class = 'menuCol1'>
-					<div class = 'option3'></div>
-					<div class = 'option4'></div>
+		<div ng-click ="advance()" class = "wordbox">
+			<p>{{message}}</p>
+			<div ng-show = 'menu' class = "menubox">
+				<div class = 'menucol1'>
+					<div class = 'option' ng-click='Fight()'>Fight</div>
+						
+					<div class = 'option' ng-click='Pokemon()'>PkMn</div>
+					</div>
+				<div class = 'menucol2'>
+					<div class = 'option' ng-click='Item()'>Item</div>
+					<div class = 'option' ng-click='Run()'>Run</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		<div class = 'fightmenu' ng-show='fight'>
+			<p ng-click='move1()'>{{blue.move1}}</p>
+			<p ng-click='move2()'>{{blue.move2}}</p>
+			<p>{{blue.move3}}</p>
+			<p>{{blue.move4}}</p>							
+			</div>
 	</div>
 <!-- World Screen -->
 	<div class = "under">
@@ -80,6 +80,8 @@
 
 	<div class = "alt">
 		</div>
-		
+	<div class = "debug">
+		{{mqueue}};
+	</div>
 </body>
 </html>
