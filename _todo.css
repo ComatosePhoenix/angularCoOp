@@ -14,6 +14,10 @@ div{
 	border-width: 1px;
 	border-style: solid; 
 }
+img{ 
+	width: 100%;
+	height: 100%;
+}
 /*opening */
 .openscreen{
 	display: none;
@@ -83,7 +87,7 @@ div{
 	text-align: center;
 }
 .red{
-	top: 2%;
+	top: 1px;
 	height: 33%;
 	width: 48%;
 	left: 50%;
@@ -104,10 +108,13 @@ div{
 	left: 1%;
 }
 .bar{
+	
 	display: block;
-	width: 100%;
+	
+	width: 90%;
 	height: 3px;
 	margin: 0%;
+	margin-left: 5%;
 	background-color: green;
 }
 .bar:hover{
@@ -116,6 +123,13 @@ div{
 	width:0%;
 	background-color: red;
 	transition: all, 1s, ease;
+}
+.menubox{
+	position: absolute;
+	display:block;
+	left:70%;
+	width: 30%;
+	height: 100%;
 }
 /*Generic*/
 .wordbox{
@@ -130,5 +144,10 @@ div{
 	background-color: gray;
 }
 .yesno{
-	//todo
+	/*todo*/
+	position: absolute;
+}
+.healcancel{
+	/*todo*/
+	position: absolute;
 }
