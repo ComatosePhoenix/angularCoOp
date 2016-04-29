@@ -1,0 +1,2 @@
+# angularCoOp
+Experiments in AngularJS
